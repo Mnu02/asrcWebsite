@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satirical Website</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/asrclogo.webp" class="logo">
+                <ul>
+                    <li><a  href="index.html">Home</a></li>
+                    <li><a  href="news.html">News Flash</a></li>
+                    <li><a  href="emotions.html">Emotions</a></li>
+                    <li><a  href="usinsts.html">US Institutions</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h2>ASRC 4023</h2>
+                <h1> 
+                    Welcome to my project. I'm <span>Mnumzana</span><br> 
+                </h1>
+                <p>
+                    This is my final project for this class. 
+                    I hope you gain <s>other people's land</s> ehem
+                    great insights.
+                </p>
+
+            </div>
+            
+        </div>
+    </div>
+
+   <!-- ------about------ -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="css/about-kaby.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About this Project</h1>
+                    <p>
+                    Right here, you've stumbled onto what I call 
+                    a fancy disaster 🥸 my final project. We're about to head first
+                    into the murky waters of settler colonialism, where the past
+                    isn't just discussed, it's dissected with a hint of ridicule 
+                    and a whole lot of truth. We're peeling back the layers of 
+                    some gloriously bad decisions and the people who made them. 
+                    So buckle up, it's going to be a bumpy ride through history
+                    — one that might just make you see things a little differently.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('news-flash')">News Flash</p>
+                        <p class="tab-links" onclick="opentab('emotions')">Emotions</p>
+                        <p class="tab-links" onclick="opentab('us-institutions')">US Institutions</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="news-flash">
+                        <ul>
+                            <li><span>News Flash</span><br> I adapted an article 
+                                from The Cornell Daily Sun. Thanks to my intrusive thoughts,
+                                I invite you to witness a different perspective 
+                                about having your space invaded.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="emotions">
+                        <ul>
+                            <li><span>Emotions</span><br> A number of Native Americans
+                                were asked to say one word or a short phrase about 
+                                how they feel about Thanksgiving. Boy, did they not
+                                share how they really feel!? Take a look.
+                                Question everything! - or don't...
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="us-institutions">
+                        <ul>
+                            <li><span>US Institutions</span><br> In this section, 
+                                we'll take a deep dive into the fine art of 
+                                conquest that was powered by the Morril Act of 
+                                1862 that allowed for the creation of land-grant 
+                                colleges in the US using the proceeds from sales 
+                                of federally owned (is it now?) land, often obtained 
+                                from Native American tribes through treaty, cession, 
+                                or seizure.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-------------->
+
+<script>
+    var tabLinks = document.getElementsByClassName("tab-links");
+    var tabContents = document.getElementsByClassName("tab-contents");
+    function opentab(tabName) {
+        for (tabLink of tabLinks) {
+            tabLink.classList.remove("active-link");
+        }
+        for (tabContent of tabContents) {
+            tabContent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabName).classList.add("active-tab");
+    }
+</script>
+
+</body>
+</html>
